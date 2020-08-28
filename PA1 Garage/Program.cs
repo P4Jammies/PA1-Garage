@@ -40,4 +40,37 @@ namespace PA1_Garage
             }
         }
     }
+
+    abstract class Vehicle
+    {
+        private string Make { get; set; }
+        private string Model { get; set; }
+        private int Year { get; set; }
+        private float Price { get; set; }
+
+        public virtual float checkPrice()
+        {
+            return Price;
+        }
+        public virtual void printInfo()
+        {
+            Console.WriteLine("Model: " + Year + Make + Model);
+        }
+        public virtual void testDrive()
+        {
+            Console.WriteLine("Brrrrrrr.");
+        }
+    }
+
+    class Minivan : Vehicle
+    {
+        public override float checkPrice()
+        {
+
+        }
+        public override void printInfo()
+        {
+
+        }
+    }
 }
